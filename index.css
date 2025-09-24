@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+.gradient-background {
+  background-color: #F1F5F9;
+  background-image: linear-gradient(180deg, #F1F5F9 0%, #E6E9FF 100%);
+  min-height: 100vh;
+}
+.dark .gradient-background {
+  background-color: #100E23;
+  background-image: linear-gradient(180deg, #100E23 0%, #1E1B3A 100%);
+}
+.calm-gradient {
+  background: linear-gradient(45deg, #1E1B3A, #5842E3, #14122B);
+  background-size: 400% 400%;
+  animation: calm-gradient-animation 15s ease infinite;
+}
+@keyframes calm-gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
