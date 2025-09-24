@@ -6,6 +6,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '', '');
   return {
     plugins: [react()],
+    base: '/InnerBloom/', // <--- LÍNEA AGREGADA
     define: {
       'process.env.API_KEY': JSON.stringify(env.API_KEY)
     },
